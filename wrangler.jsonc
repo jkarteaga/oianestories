@@ -7,13 +7,13 @@
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "my-emdash-site","database_id": "bd20d967-d230-4997-b3c6-0f540cd6164f",
+			"database_name": "oianestories-db","database_id": "bd20d967-d230-4997-b3c6-0f540cd6164f",
 		},
 	],
 	"r2_buckets": [
 		{
 			"binding": "MEDIA",
-			"bucket_name": "my-emdash-media","preview_bucket_name": "my-emdash-media",
+			"bucket_name": "oianestories-media","preview_bucket_name": "my-emdash-media",
 		},
 	],
 	// Worker Loader for plugin sandboxing
