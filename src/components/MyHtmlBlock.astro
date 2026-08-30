@@ -1,0 +1,27 @@
+---
+// src/components/MyHtmlBlock.astro
+import sanitizeHtml from "sanitize-html";
+
+const { node } = Astro.props;
+
+if (!node?.html) {
+  return null;
+}
+
+const sanitized = sanitizeHtml(node.html, {
+  allowedTags: [...sanitizeHtml.defaults.allowedTags, "img", "span", "iframe"],
+  allowedAttributes: {
+    ...sanitizeHtml.defaults.allowedAttributes,
+    "*": ["class", "id", "data-*", "style"],
+    iframe: ["src", "width", "height", "frameborder", "allow", "allowfullscreen", "webkitallowfullscreen", "mozallowfullscreen"],
+    img: ["src", "srcset", "alt", "title", "width", "height", "loading"],
+  },
+  allowedIframeHostnames: [
+    "www.youtube.com",
+    "player.vimeo.com",
+    "archive.org",
+  ],
+});
+---
+
+<div class="html-block" set:html={sanitized} />
