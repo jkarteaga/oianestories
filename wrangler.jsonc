@@ -7,7 +7,7 @@
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "oianestories-db","database_id": "bd20d967-d230-4997-b3c6-0f540cd6164f",
+			"database_name": "oianestories-db","database_id": "d2aae821-2272-4e75-a72e-e2b6acecc206",
 		},
 	],
 	"r2_buckets": [
